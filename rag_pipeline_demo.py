@@ -45,5 +45,5 @@ pipeline.add_node(component=prompt_node, name="Generator", inputs=["Retriever"])
 if __name__ == "__main__":
     query = "How do savings accounts earn money?"
     result = pipeline.run(query=query, params={"Retriever": {"top_k": 3}})
-    for answer in result["answers"]:
-        print(answer.answer)
+    for answer in result["results"]:
+        print(answer)
