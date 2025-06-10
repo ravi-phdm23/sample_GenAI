@@ -25,7 +25,6 @@ document_store.update_embeddings(retriever)
 
 # 3. Define prompt template
 prompt_template = PromptTemplate(
-    name="finance_qa",
     prompt="""
 Given these documents:\n{join(documents)}\n\nAnswer the question: {query}
 """,
